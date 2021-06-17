@@ -9,12 +9,12 @@
 </head>
 <body>
 
-  <div class="login-form__wrap">
+  <div class="form__wrap">
     <form action="" class="login-form">
       <img src="img/user.svg" alt="" class="person-avatar">
       <input type="text" class="username" placeholder="Username">
       <input type="password" class="password" placeholder="Password">
-      <div class="password__wrap">
+      <div class="remember-me__wrap">
         <label for="remember-me">
           <input type="checkbox" class="remember-me" id="remember-me">
           Remember me
@@ -27,7 +27,28 @@
         <a href="#">Create account</a>
       </div>
     </form>
+
+
+    <form action="" class="register-form">
+      <input type="text" class="username" placeholder="Username">
+      <div class="prompt__wrap">
+        <span class="prompt">Less than 12 characters</span>
+      </div>
+      <input type="email" class="email" placeholder="E-mail">
+      <input type="password" class="password" placeholder="Password">
+      <div class="prompt__wrap">
+        <span class="prompt">8-24 characters</span>
+        <span class="prompt active">Special character</span>
+        <span class="prompt">2 or more capital letterы</span>
+        <span class="prompt">4 or more digits</span>
+      </div>
+      <input type="password" class="password" placeholder="Repeat password">
+      <button class="register-button" type="submit">Register</button>
+    </form>
+
   </div>
+
+
 
 </body>
 </html>
