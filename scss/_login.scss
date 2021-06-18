@@ -14,7 +14,7 @@
   align-items: center;
   padding: 100px 30px;
   border-radius: 10px;
-  display: none;
+  transition: all 0.4s linear;
 
   & input[type="text"],
   & input[type="password"] {
@@ -39,28 +39,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-}
-input[type="text"],
-input[type="email"],
-input[type="password"] {
-  width: 100%;
-  background-color: transparent;
-  color: #fff;
-  border: 1px solid #fff;
-  height: 35px;
-  border-radius: 5px;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  padding-right: 5px;
-  // padding-left: 50px;
-  margin-top: 15px;
-
-  &::placeholder {
-    font-size: 16px;
-    color: #fff;
-    font-weight: 100;
-    letter-spacing: 3px;
-  }
 }
 
 .remember-me__wrap {
@@ -114,4 +92,20 @@ input[type="password"] {
       text-decoration: underline;
     }
   }
+}
+
+.username__label {
+  width: 100%;
+  position: relative;
+}
+
+.username-icon,
+.password-icon {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-20%);
+  fill: #ffffff;
 }

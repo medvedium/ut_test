@@ -6,7 +6,8 @@
   align-items: center;
   padding: 100px 30px;
   border-radius: 10px;
-  // display: none;
+  transition: all 0.3s linear;
+  display: none;
 
   & input[type="text"],
   & input[type="email"],
@@ -26,6 +27,10 @@
     margin-bottom: 20px;
     cursor: pointer;
     margin-top: 15px;
+
+    &:disabled {
+      background-color: #ccc;
+    }
   }
 
   & .prompt {
@@ -33,10 +38,10 @@
     width: 100%;
     color: rgb(143, 143, 143);
     display: block;
-
     &__wrap {
       margin-top: 5px;
       width: 100%;
+      display: none;
     }
 
     &.active {

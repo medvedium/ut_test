@@ -12,8 +12,14 @@
   <div class="form__wrap">
     <form action="" class="login-form">
       <img src="img/user.svg" alt="" class="person-avatar">
-      <input type="text" class="username" placeholder="Username">
-      <input type="password" class="password" placeholder="Password">
+      <label for="username__login" class="username__label">
+        <img src="img/user-sm.svg" alt="" class="username-icon">
+        <input type="text" class="username username__login" placeholder="Username" id="username__login">
+      </label>
+      <label for="username__password" class="username__label">
+        <img src="img/padlock.svg" alt="" class="password-icon">
+        <input type="password" class="password password__login" placeholder="Password" id="username__password">
+      </label>
       <div class="remember-me__wrap">
         <label for="remember-me">
           <input type="checkbox" class="remember-me" id="remember-me">
@@ -24,31 +30,33 @@
       <button class="login-button" type="submit">Login</button>
       <div class="create-account">
         <span>Not a member?</span>
-        <a href="#">Create account</a>
+        <a href="#" id="create-account">Create account</a>
       </div>
     </form>
 
 
     <form action="" class="register-form">
-      <input type="text" class="username" placeholder="Username">
-      <div class="prompt__wrap">
-        <span class="prompt">Less than 12 characters</span>
-      </div>
+      <input type="text" class="username username-register" placeholder="Username" maxlength="12" value="">
       <input type="email" class="email" placeholder="E-mail">
-      <input type="password" class="password" placeholder="Password">
+      <input type="password" id="password" class="password" placeholder="Password" maxlength="24">
       <div class="prompt__wrap">
-        <span class="prompt">8-24 characters</span>
-        <span class="prompt active">Special character</span>
-        <span class="prompt">2 or more capital letterы</span>
-        <span class="prompt">4 or more digits</span>
+        <span class="prompt prompt-length">8-24 characters</span>
+        <span class="prompt prompt-special">Special character</span>
+        <span class="prompt prompt-uppercase">2 or more uppercase letters</span>
+        <span class="prompt prompt-digits">4 or more digits</span>
       </div>
-      <input type="password" class="password" placeholder="Repeat password">
-      <button class="register-button" type="submit">Register</button>
+      <input type="password" class="repeat_password" placeholder="Repeat password">
+      <button class="register-button" type="submit" disabled>Register</button>
     </form>
+
+    <div class="sucsess">
+      You are logged!
+      <a href="#" class="logout">Log Out</a>
+    </div>
 
   </div>
 
-
+  <script src="js/app.js"></script>
 
 </body>
 </html>

@@ -137,54 +137,14 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.person-avatar {
-  width: 100px;
-  background-color: #fff;
-  display: block;
-  border-radius: 50%;
-  margin-bottom: 30px;
+.is-hide {
+  -webkit-transform: scale(0);
+          transform: scale(0);
 }
 
-.login-form {
-  width: 320px;
-  background-color: #555555;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 100px 30px;
-  border-radius: 10px;
-  display: none;
-}
-
-.login-form input[type="text"],
-.login-form input[type="password"] {
-  padding-left: 50px;
-}
-
-.form__wrap {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(135deg, #2372b7 0%, #00a69c 100%, #00d4ff 100%);
-  background-repeat: no-repeat;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+.is-shown {
+  -webkit-transition: all 0.4s linear;
+  transition: all 0.4s linear;
 }
 
 input[type="text"],
@@ -200,6 +160,7 @@ input[type="password"] {
   padding-bottom: 5px;
   padding-right: 5px;
   margin-top: 15px;
+  position: relative;
 }
 
 input[type="text"]::-webkit-input-placeholder,
@@ -236,6 +197,94 @@ input[type="password"]::placeholder {
   color: #fff;
   font-weight: 100;
   letter-spacing: 3px;
+}
+
+.sucsess {
+  width: 500px;
+  height: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #555;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 16px;
+  display: none;
+}
+
+.logout {
+  color: #fff;
+  background-color: #55a3f1;
+  display: block;
+  padding: 5px 15px;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 30px;
+}
+
+.logout:hover {
+  text-decoration: underline;
+}
+
+.person-avatar {
+  width: 100px;
+  background-color: #fff;
+  display: block;
+  border-radius: 50%;
+  margin-bottom: 30px;
+}
+
+.login-form {
+  width: 320px;
+  background-color: #555555;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 100px 30px;
+  border-radius: 10px;
+  -webkit-transition: all 0.4s linear;
+  transition: all 0.4s linear;
+}
+
+.login-form input[type="text"],
+.login-form input[type="password"] {
+  padding-left: 50px;
+}
+
+.form__wrap {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #2372b7 0%, #00a69c 100%, #00d4ff 100%);
+  background-repeat: no-repeat;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .remember-me__wrap {
@@ -301,6 +350,23 @@ input[type="password"]::placeholder {
   text-decoration: underline;
 }
 
+.username__label {
+  width: 100%;
+  position: relative;
+}
+
+.username-icon,
+.password-icon {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  left: 20px;
+  top: 50%;
+  -webkit-transform: translateY(-20%);
+          transform: translateY(-20%);
+  fill: #ffffff;
+}
+
 .register-form {
   width: 320px;
   background-color: #555555;
@@ -316,6 +382,9 @@ input[type="password"]::placeholder {
           align-items: center;
   padding: 100px 30px;
   border-radius: 10px;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+  display: none;
 }
 
 .register-form input[type="text"],
@@ -338,6 +407,10 @@ input[type="password"]::placeholder {
   margin-top: 15px;
 }
 
+.register-form .register-button:disabled {
+  background-color: #ccc;
+}
+
 .register-form .prompt {
   font-size: 12px;
   width: 100%;
@@ -348,6 +421,7 @@ input[type="password"]::placeholder {
 .register-form .prompt__wrap {
   margin-top: 5px;
   width: 100%;
+  display: none;
 }
 
 .register-form .prompt.active {
